@@ -15,7 +15,15 @@ it('is expected that component will initialize with empty array', () => {
 it('gift will be added on clicking the `Add Gift` button', () => {
   const previousGiftStateLength = app.state().gifts.length
   app.find('.add-gift').simulate('click')
+  const currentGiftStateLength = app.state().gifts.length
 
-  let isGiftAdded = (Number(app.state().gifts.length) > previousGiftStateLength)
-  expect(isGiftAdded).toBe(true);
+  expect(currentGiftStateLength).toBeGreaterThan(previousGiftStateLength)
+})
+
+it('expects that a new gift is rendered after clicking `Add Gift Button`', () => {
+  const previousGiftListLength = app.find('.gift-list').children().length
+  app.find('.add-gift').simulate('click')
+  const currentGiftListLength = app.find('.gift-list').children().length
+
+  expect(currentGiftListLength).toBeGreaterThan(previousGiftListLength)
 })

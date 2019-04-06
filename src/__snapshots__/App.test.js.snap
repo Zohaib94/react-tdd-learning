@@ -11,5 +11,8 @@ exports[`is expected that component will render correctly 1`] = `
   >
     Add Gift
   </button>
+  <div
+    className="gift-list"
+  />
 </div>
 `;

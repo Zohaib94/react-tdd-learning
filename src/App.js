@@ -12,12 +12,23 @@ class App extends Component {
   }
 
   render() {
+    let { gifts } = this.state;
+
     return (
       <div>
         <h2>This is a testing application</h2>
         <button className='add-gift' onClick={this.addGift}>
           Add Gift
         </button>
+        <div className='gift-list'>
+          {
+            gifts.map((gift) => (
+              <div key={gift.id}>
+                Gift #{gift.id}
+              </div>
+            ))
+          }
+        </div>
       </div>
     )
   }
