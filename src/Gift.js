@@ -10,9 +10,17 @@ export default class Gift extends Component {
     return (
       <div>
         <form>
+          <label>Person:</label>
           <input type='text' className='person-input' onChange={(event) => {
             this.setState({
               person: event.target.value
+            })
+          }} />
+
+          <label>Present:</label>
+          <input type='text' className='present-input' onChange={(event) => {
+            this.setState({
+              present: event.target.value
             })
           }} />
         </form>

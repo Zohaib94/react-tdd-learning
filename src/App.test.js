@@ -36,5 +36,9 @@ describe('When App is rendered', () => {
       const currentGiftListLength = app.find('.gift-list').children().length
       expect(currentGiftListLength).toBeGreaterThan(previousGiftListLength)
     })
+
+    it('expects that gift component is created', () => {
+      expect(app.find('Gift').exists()).toEqual(true)
+    })
   })
 })

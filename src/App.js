@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Gift from './Gift'
 
 class App extends Component {
   state = {
@@ -24,7 +25,7 @@ class App extends Component {
           {
             gifts.map((gift) => (
               <div key={gift.id}>
-                Gift #{gift.id}
+                <Gift />
               </div>
             ))
           }

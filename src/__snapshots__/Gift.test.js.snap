@@ -3,8 +3,19 @@
 exports[`Gift renders properly 1`] = `
 <div>
   <form>
+    <label>
+      Person:
+    </label>
     <input
       className="person-input"
+      onChange={[Function]}
+      type="text"
+    />
+    <label>
+      Present:
+    </label>
+    <input
+      className="present-input"
       onChange={[Function]}
       type="text"
     />

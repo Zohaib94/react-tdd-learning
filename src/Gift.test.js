@@ -16,7 +16,7 @@ describe('Gift', () => {
     })
   })
 
-  describe('When input is entered', () => {
+  describe('When person input is entered', () => {
     const personInput = 'Zohaib'
 
     beforeEach(() => {
@@ -25,6 +25,18 @@ describe('Gift', () => {
 
     it('is expected that state is equivalent to person input', () => {
       expect(gift.state().person).toEqual(personInput)
+    })
+  })
+
+  describe('When present input is entered', () => {
+    const presentInput = 'Zohaib'
+
+    beforeEach(() => {
+      gift.find('.present-input').simulate('change', { target: { value: presentInput }})
+    })
+
+    it('is expected that state is equivalent to present input', () => {
+      expect(gift.state().present).toEqual(presentInput)
     })
   })
 })
