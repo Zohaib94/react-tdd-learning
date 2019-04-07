@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`is expected that component will render correctly 1`] = `
+exports[`When App is rendered is expected that component will render correctly 1`] = `
 <div>
   <h2>
     This is a testing application
