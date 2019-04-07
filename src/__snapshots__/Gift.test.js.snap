@@ -19,6 +19,11 @@ exports[`Gift renders properly 1`] = `
       onChange={[Function]}
       type="text"
     />
+    <button
+      onClick={[Function]}
+    >
+      Remove
+    </button>
   </form>
 </div>
 `;

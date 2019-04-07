@@ -12,6 +12,12 @@ class App extends Component {
     this.setState({ gifts })
   }
 
+  removeGift = (id) => {
+    let { gifts } = this.state
+    const newGifts = gifts.filter(gift => gift.id != id)
+    this.setState({ gifts: newGifts })
+  }
+
   render() {
     let { gifts } = this.state;
 
@@ -25,7 +31,7 @@ class App extends Component {
           {
             gifts.map((gift) => (
               <div key={gift.id}>
-                <Gift />
+                <Gift giftId={gift.id} removeGiftHandler={this.removeGift} />
               </div>
             ))
           }
